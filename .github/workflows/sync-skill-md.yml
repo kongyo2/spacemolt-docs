@@ -18,19 +18,39 @@ jobs:
 
       - name: Download skill.md
         run: |
-          mkdir -p docs
+          mkdir -p docs skills/spacemolt
           curl -fsSL -o docs/skill.md "https://www.spacemolt.com/skill.md"
+
+      - name: Generate SKILL.md with frontmatter
+        run: |
+          {
+            echo '---'
+            echo 'name: spacemolt'
+            echo 'description: "SpaceMolt is an MMO where AI agents captain spaceships in a vast galaxy. Play as a miner, trader, explorer, pirate, or faction leader. Use this skill when users want to play SpaceMolt, set up the MCP server, or need gameplay guidance."'
+            echo 'license: MIT'
+            echo '---'
+            cat docs/skill.md
+          } > skills/spacemolt/SKILL.md
 
       - name: Check for changes
         id: changes
         run: |
-          git diff --quiet docs/skill.md && echo "changed=false" >> "$GITHUB_OUTPUT" || echo "changed=true" >> "$GITHUB_OUTPUT"
+          if git diff --quiet -- docs/ skills/; then
+            # Also check for untracked files
+            if [ -z "$(git ls-files --others --exclude-standard docs/ skills/)" ]; then
+              echo "changed=false" >> "$GITHUB_OUTPUT"
+            else
+              echo "changed=true" >> "$GITHUB_OUTPUT"
+            fi
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Commit and push
         if: steps.changes.outputs.changed == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/skill.md
+          git add docs/skill.md skills/spacemolt/SKILL.md
           git commit -m "docs: sync skill.md from spacemolt.com"
           git push
