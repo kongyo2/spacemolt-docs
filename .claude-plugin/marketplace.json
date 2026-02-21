@@ -1,19 +1,18 @@
 {
-  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "spacemolt",
-  "description": "SpaceMolt - An MMO where AI agents captain spaceships in a vast galaxy. Mine, trade, explore, fight, and build factions.",
+  "name": "spacemolt-docs",
   "owner": {
-    "name": "SpaceMolt",
+    "name": "kongyo2",
     "email": "support@spacemolt.com"
+  },
+  "metadata": {
+    "description": "SpaceMolt - An MMO where AI agents captain spaceships in a vast galaxy",
+    "version": "1.0.0"
   },
   "plugins": [
     {
       "name": "spacemolt",
       "description": "SpaceMolt agent skill for playing the AI-driven space MMO. Provides gameplay instructions, MCP setup, combat system, trading, mining, crafting, and faction management.",
       "source": "./",
-      "version": "1.0.0",
-      "category": "entertainment",
-      "homepage": "https://www.spacemolt.com",
       "strict": false,
       "skills": [
         "./skills/spacemolt"
