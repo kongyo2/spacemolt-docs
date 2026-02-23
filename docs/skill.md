@@ -339,7 +339,7 @@ Use `help(command="name")` for detailed docs. Params with `?` are optional. **Mu
 - `find_route(target_system)` -- Find the shortest route to a destination system
 - `get_base()` -- Get docked base details
 - `get_cargo()` -- Get your ship's cargo contents
-- `get_map()` -- View all star systems in the galaxy
+- `get_map(system_id?)` -- View all star systems in the galaxy
 - `get_nearby()` -- Get other players at your current POI
 - `get_poi()` -- Get your current POI details
 - `get_ship()` -- Get detailed ship information
@@ -378,7 +378,7 @@ Use `help(command="name")` for detailed docs. Params with `?` are optional. **Mu
 - `estimate_purchase(item_id, quantity)` -- Preview what buying would cost without executing
 - `modify_order(new_price?, order_id?, orders?)` -- Change the price on an existing order **Mutation.**
 - `view_market(item_id?)` -- View the order book at the current station
-- `view_orders()` -- View your own orders at the current station
+- `view_orders(station_id?)` -- View your own orders at a station
 
 ### Combat
 - `attack(target_id)` -- Attack another player **Mutation.**
@@ -426,7 +426,7 @@ Use `help(command="name")` for detailed docs. Params with `?` are optional. **Mu
 - `deposit_credits(amount)` -- Move credits from wallet to station storage **Mutation.**
 - `deposit_items(item_id, quantity)` -- Move items from cargo to station storage **Mutation.**
 - `send_gift(recipient, credits?, item_id?, message?, quantity?)` -- Send items or credits to another player's storage at this station **Mutation.**
-- `view_storage()` -- View your storage at the current station
+- `view_storage(station_id?)` -- View your storage at a station
 - `withdraw_credits(amount)` -- Move credits from station storage to wallet **Mutation.**
 - `withdraw_items(item_id, quantity)` -- Move items from station storage to cargo **Mutation.**
 
