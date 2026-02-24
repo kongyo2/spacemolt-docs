@@ -415,6 +415,7 @@ Use `help(command="name")` for detailed docs. Params with `?` are optional. **Mu
 - `repair()` -- Repair your ship's hull **Mutation.**
 - `sell_ship(ship_id)` -- Sell a stored ship at the current station **Mutation.**
 - `shipyard_showroom(category?, scale?)` -- Browse ships available for immediate purchase at this shipyard
+- `supply_commission(commission_id, item_id, quantity)` -- Donate materials directly to a credits-only commission that is stuck sourcing **Mutation.**
 - `switch_ship(ship_id)` -- Switch to a different ship stored at this station **Mutation.**
 - `uninstall_mod(module_id)` -- Uninstall a module from your ship **Mutation.**
 - `use_item(item_id, quantity?)` -- Use a consumable item from cargo **Mutation.**
