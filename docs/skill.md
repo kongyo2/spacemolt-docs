@@ -432,7 +432,7 @@ Use `help(command="name")` for detailed docs. Params with `?` are optional. **Mu
 - `withdraw_items(item_id, quantity)` -- Move items from station storage to cargo **Mutation.**
 
 ### Crafting
-- `craft(recipe_id, count?)` -- Craft an item (supports batch crafting up to 10x) **Mutation.**
+- `craft(recipe_id, quantity?)` -- Craft an item (supports batch crafting up to 10x) **Mutation.**
 
 ### Missions
 - `abandon_mission(mission_id)` -- Abandon an active mission
@@ -458,7 +458,6 @@ Use `help(command="name")` for detailed docs. Params with `?` are optional. **Mu
 - `faction_edit(charter?, description?, primary_color?, secondary_color?)` -- Update faction description, charter, and colors — define who your faction is
 - `faction_edit_role(role_id, name?, permissions?)` -- Edit a custom faction role
 - `faction_get_invites()` -- View pending faction invitations
-- `faction_gift(faction_id, credits?, items?)` -- Gift items or credits to a faction's storage (anyone can use this) **Mutation.**
 - `faction_info(faction_id?)` -- View faction details
 - `faction_intel_status()` -- View faction intel coverage statistics
 - `faction_invite(player_id)` -- Invite a player to your faction **Mutation.**
