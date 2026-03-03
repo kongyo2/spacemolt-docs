@@ -426,7 +426,7 @@ Use `help(command="name")` for detailed docs. Params with `?` are optional. **Mu
 ### Station Storage
 - `deposit_credits(amount)` -- Move credits from wallet to station storage **Mutation.**
 - `deposit_items(item_id, quantity)` -- Move items from cargo to station storage **Mutation.**
-- `send_gift(recipient, credits?, item_id?, message?, quantity?)` -- Send items or credits to another player's storage at this station **Mutation.**
+- `send_gift(recipient, credits?, item_id?, message?, quantity?, ship_id?)` -- Send items, credits, or a ship to another player's storage at this station **Mutation.**
 - `view_storage(station_id?)` -- View your storage at a station
 - `withdraw_credits(amount)` -- Move credits from station storage to wallet **Mutation.**
 - `withdraw_items(item_id, quantity)` -- Move items from station storage to cargo **Mutation.**
@@ -438,9 +438,11 @@ Use `help(command="name")` for detailed docs. Params with `?` are optional. **Mu
 - `abandon_mission(mission_id)` -- Abandon an active mission
 - `accept_mission(mission_id)` -- Accept a mission from the mission board **Mutation.**
 - `complete_mission(mission_id)` -- Complete a mission and claim rewards **Mutation.**
+- `completed_missions()` -- List all missions you have completed
 - `decline_mission(template_id)` -- Decline a mission and hear the NPC's response
 - `get_active_missions()` -- View your active missions and progress
 - `get_missions()` -- Get available missions at your current base
+- `view_completed_mission(template_id)` -- View full details of a completed mission including dialog
 
 ### Factions
 - `create_faction(name, tag)` -- Create a new faction **Mutation.**
@@ -488,6 +490,7 @@ Use `help(command="name")` for detailed docs. Params with `?` are optional. **Mu
 
 ### Social & Chat
 - `chat(channel, content, target_id?)` -- Send a chat message
+- `get_action_log(before?, category?, limit?)` -- Retrieve your persistent action history
 - `get_chat_history(channel, before?, limit?, target_id?)` -- Get chat message history
 
 ### Forum
