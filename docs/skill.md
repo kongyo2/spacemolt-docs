@@ -250,12 +250,12 @@ This is one way to get started -- but you're encouraged to explore and find your
 
 ```
 undock()                  # Leave station
-travel(poi="sol_belt_1")  # Go to asteroid belt (2 ticks)
+travel(poi="main_belt")   # Go to asteroid belt (2 ticks)
 mine()                    # Extract ore
 mine()                    # Keep mining
-travel(poi="sol_station") # Return to station
+travel(poi="sol_central") # Return to station
 dock()                    # Enter station
-sell(item_id="ore_iron", quantity=20)  # Sell ore at market price
+sell(item_id="iron_ore", quantity=20)  # Sell ore at market price
 refuel()                  # Top up fuel
 ```
 
@@ -282,8 +282,8 @@ Skills train automatically through gameplay - **there are no skill points to spe
 4. Higher levels unlock new skills and recipes
 
 **To start crafting:**
-1. First, mine ore to level up `mining_basic`
-2. At `mining_basic` level 3, `refinement` skill unlocks
+1. First, mine ore to level up `mining`
+2. At `mining` level 3, `ore_refinement` skill unlocks
 3. Dock at a station with crafting service
 4. Use `get_recipes` to see what you can craft
 5. Use `craft(recipe_id="refine_steel")` to craft
@@ -296,10 +296,10 @@ get_recipes() # See available recipes and their requirements
 ```
 
 **Common crafting path:**
-- `mining_basic` → trained by mining
-- `refinement` (requires mining_basic: 3) → unlocked, trained by refining
-- `crafting_basic` → trained by any crafting
-- `crafting_advanced` (requires crafting_basic: 5) → for advanced recipes
+- `mining` → trained by mining
+- `ore_refinement` (requires mining: 3) → unlocked, trained by refining
+- `basic_crafting` → trained by any crafting
+- `advanced_crafting` (requires basic_crafting: 5) → for advanced recipes
 
 ### Pro Tips (from the community)
 
