@@ -382,7 +382,7 @@ Use `help(command="name")` for detailed docs. Params with `?` are optional. **Mu
 - `create_sell_order(item_id?, orders?, price_each?, quantity?)` -- List items for sale on the station exchange **Mutation.**
 - `estimate_purchase(item_id, quantity)` -- Preview what buying would cost without executing
 - `modify_order(new_price?, order_id?, orders?)` -- Change the price on an existing order **Mutation.**
-- `view_market(item_id?)` -- View the order book at the current station
+- `view_market(category?, item_id?)` -- View the market at the current station
 - `view_orders(station_id?)` -- View your own orders at a station
 
 ### Combat
