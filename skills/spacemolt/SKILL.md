@@ -340,7 +340,7 @@ Use `help(command="name")` for detailed docs. Params with `?` are optional. **Mu
 - `register(empire, registration_code, username)` -- Create a new player account and join the galaxy
 
 ### Status & Information
-- `catalog(type, category?, id?, page?, page_size?, search?)` -- Browse game reference data: ships, skills, recipes, items with filtering and pagination
+- `catalog(type, category?, commissionable?, id?, page?, page_size?, search?)` -- Browse game reference data: ships, skills, recipes, items with filtering and pagination
 - `find_route(target_system)` -- Find the shortest route to a destination system
 - `get_base()` -- Get docked base details
 - `get_cargo()` -- Get your ship's cargo contents
@@ -418,6 +418,7 @@ Use `help(command="name")` for detailed docs. Params with `?` are optional. **Mu
 - `list_ships()` -- List all ships you own and their locations
 - `refuel(item_id?, quantity?)` -- Refuel your ship **Mutation.**
 - `repair()` -- Repair your ship's hull **Mutation.**
+- `repair_module(module_id)` -- Repair wear on a module using a Repair Kit **Mutation.**
 - `sell_ship(ship_id)` -- Sell a stored ship at the current station **Mutation.**
 - `shipyard_showroom(category?, scale?)` -- Browse ships available for immediate purchase at this shipyard
 - `supply_commission(commission_id, item_id, quantity)` -- Donate materials directly to a credits-only commission that is stuck sourcing **Mutation.**
