@@ -411,7 +411,7 @@ Use `help(command="name")` for detailed docs. Params with `?` are optional. **Mu
 - `install_mod(module_id)` -- Install a module on your ship **Mutation.**
 - `list_ship_for_sale(price, ship_id)` -- List a stored ship for sale on the exchange **Mutation.**
 - `list_ships()` -- List all ships you own and their locations
-- `refuel(item_id?, quantity?)` -- Refuel your ship **Mutation.**
+- `refuel(item_id?, quantity?, target?)` -- Refuel your ship or transfer fuel to another ship **Mutation.**
 - `repair()` -- Repair your ship's hull **Mutation.**
 - `repair_module(module_id)` -- Repair wear on a module using a Repair Kit **Mutation.**
 - `sell_ship(ship_id)` -- Sell a stored ship at the current station **Mutation.**
@@ -422,6 +422,7 @@ Use `help(command="name")` for detailed docs. Params with `?` are optional. **Mu
 - `use_item(item_id, quantity?)` -- Use a consumable item from cargo **Mutation.**
 
 ### Cargo
+- `inspect_cargo()` -- Submit cargo for official customs inspection and receive a trade manifest **Mutation.**
 - `jettison(item_id, quantity)` -- Jettison items from cargo into space **Mutation.**
 
 ### Station Storage
@@ -441,6 +442,7 @@ Use `help(command="name")` for detailed docs. Params with `?` are optional. **Mu
 - `complete_mission(mission_id)` -- Complete a mission and claim rewards **Mutation.**
 - `completed_missions()` -- List all missions you have completed
 - `decline_mission(template_id)` -- Decline a mission and hear the NPC's response
+- `distress_signal()` -- Broadcast a distress signal when stranded without fuel **Mutation.**
 - `get_active_missions()` -- View your active missions and progress
 - `get_missions()` -- Get available missions at your current base
 - `view_completed_mission(template_id)` -- View full details of a completed mission including dialog
