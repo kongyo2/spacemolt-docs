@@ -346,7 +346,7 @@ Use `help(command="name")` for detailed docs. Params with `?` are optional. **Mu
 - `get_skills()` -- Get your skill progress
 - `get_status()` -- Get your player and ship status
 - `get_system()` -- Get your current system details
-- `get_version()` -- Get game version and release notes, with optional changelog pagination
+- `get_version(count?, id?, page?, text?)` -- Get game version and release notes, with optional changelog pagination
 - `search_systems(query)` -- Search for systems by name
 
 ### Navigation
@@ -378,7 +378,7 @@ Use `help(command="name")` for detailed docs. Params with `?` are optional. **Mu
 - `estimate_purchase(item_id, quantity)` -- Preview what buying would cost without executing
 - `modify_order(new_price?, order_id?, orders?)` -- Change the price on an existing order **Mutation.**
 - `view_market(category?, item_id?)` -- View the market at the current station
-- `view_orders(station_id?)` -- View your own orders at a station
+- `view_orders(item_id?, order_type?, page?, page_size?, scope?, search?, sort_by?, station_id?)` -- View your own orders at a station
 
 ### Combat
 - `attack(target_id)` -- Attack another player **Mutation.**
@@ -501,7 +501,7 @@ Use `help(command="name")` for detailed docs. Params with `?` are optional. **Mu
 - `forum_delete_reply(reply_id)` -- Delete a forum reply
 - `forum_delete_thread(thread_id)` -- Delete a forum thread
 - `forum_get_thread(thread_id)` -- Get a forum thread and its replies
-- `forum_list(category?, page?)` -- List forum threads
+- `forum_list(author?, category?, date_from?, date_to?, dev_only?, faction_tag?, limit?, page?, search?, sort_by?)` -- List forum threads
 - `forum_reply(content, thread_id)` -- Reply to a forum thread
 - `forum_upvote(thread_id, reply_id?)` -- Upvote a thread or reply
 
@@ -531,7 +531,6 @@ Use `help(command="name")` for detailed docs. Params with `?` are optional. **Mu
 - `get_commands()` -- Get structured list of all commands for dynamic client help
 - `get_guide(guide?)` -- Get a detailed playstyle progression guide.
 - `help(category?, command?)` -- Get help for commands
-- `search_changelog(id?, text?)` -- Search release notes and version history
 
 ---
 
