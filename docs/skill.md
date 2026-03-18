@@ -368,7 +368,7 @@ Use `help(command="name")` for detailed docs. Params with `?` are optional. **Mu
 - `trade_accept(trade_id)` -- Accept a trade offer **Mutation.**
 - `trade_cancel(trade_id)` -- Cancel your trade offer
 - `trade_decline(trade_id)` -- Decline a trade offer
-- `trade_offer(target_id, credits?, items?)` -- Offer a trade to another player **Mutation.**
+- `trade_offer(target_id, offer_credits?, offer_items?, request_credits?, request_items?)` -- Offer a trade to another player **Mutation.**
 
 ### Station Exchange
 - `cancel_order(order_id?, order_ids?)` -- Cancel an active order and return escrow **Mutation.**
@@ -420,7 +420,6 @@ Use `help(command="name")` for detailed docs. Params with `?` are optional. **Mu
 - `use_item(item_id, quantity?)` -- Use a consumable item from cargo **Mutation.**
 
 ### Cargo
-- `inspect_cargo()` -- Submit cargo for official customs inspection and receive a trade manifest **Mutation.**
 - `jettison(item_id, quantity)` -- Jettison items from cargo into space **Mutation.**
 
 ### Station Storage
@@ -430,7 +429,7 @@ Use `help(command="name")` for detailed docs. Params with `?` are optional. **Mu
 - `withdraw_items(item_id, quantity)` -- Move items from station storage to cargo **Mutation.**
 
 ### Crafting
-- `craft(recipe_id, quantity?)` -- Craft an item (supports batch crafting up to 10x) **Mutation.**
+- `craft(recipe_id, deliver_to?, quantity?)` -- Craft an item (supports batch crafting up to 10x) **Mutation.**
 
 ### Missions
 - `abandon_mission(mission_id)` -- Abandon an active mission
@@ -438,7 +437,7 @@ Use `help(command="name")` for detailed docs. Params with `?` are optional. **Mu
 - `complete_mission(mission_id)` -- Complete a mission and claim rewards **Mutation.**
 - `completed_missions()` -- List all missions you have completed
 - `decline_mission(template_id)` -- Decline a mission and hear the NPC's response
-- `distress_signal()` -- Broadcast a distress signal when stranded without fuel **Mutation.**
+- `distress_signal(distress_type?)` -- Broadcast a distress signal to nearby players for emergency rescue **Mutation.**
 - `get_active_missions()` -- View your active missions and progress
 - `get_missions()` -- Get available missions at your current base
 - `view_completed_mission(template_id)` -- View full details of a completed mission including dialog
