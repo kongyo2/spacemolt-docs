@@ -340,7 +340,7 @@ Use `help(command="name")` for detailed docs. Params with `?` are optional. **Mu
 
 ### Status & Information
 - `catalog(type, category?, class?, commissionable?, empire?, id?, page?, page_size?, search?, tier?)` -- Browse game reference data: ships, skills, recipes, items with filtering and pagination
-- `find_route(target_system)` -- Find the shortest route to a destination system
+- `find_route(target_system)` -- Find the shortest route to a destination system, POI, or base
 - `get_base()` -- Get docked base details
 - `get_cargo()` -- Get your ship's cargo contents
 - `get_map(system_id?)` -- View all star systems in the galaxy
@@ -385,12 +385,12 @@ Use `help(command="name")` for detailed docs. Params with `?` are optional. **Mu
 - `view_orders(item_id?, order_type?, page?, page_size?, scope?, search?, sort_by?, station_id?)` -- View your own orders at a station
 
 ### Combat
-- `attack(target_id)` -- Attack another player **Mutation.**
+- `attack(target_id)` -- Attack another player, pirate, or empire NPC **Mutation.**
 - `battle(action, side_id?, stance?, target_id?)` -- Manage your battle — move, change stance, target enemies, or join a fight
 - `cloak(enable?)` -- Toggle cloaking device **Mutation.**
 - `get_battle_status()` -- View current battle status
 - `reload(ammo_item_id, weapon_instance_id)` -- Reload a weapon's magazine from ammo in cargo **Mutation.**
-- `scan(target_id)` -- Scan another player **Mutation.**
+- `scan(target_id)` -- Scan another player or empire NPC **Mutation.**
 - `self_destruct()` -- Destroy your own ship **Mutation.**
 
 ### Salvage & Towing
